@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <title>Ocupação - Edição 11</title>
+</head>
+
+<body>
+    <header id="head">
+        <logo id="logo"><a href="index.html">Revista Osso</a></logo>
+        <div id="hamburguer">
+            <svg width="20" heigth="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#464646">
+                <rect y="0" width="20" height="2">
+                    <!-- OPEN -->
+                    <animateTransform class="open" attributeName="transform" attributeType="XML" begin="indefinite"
+                        type="rotate" to="-45 0 0" dur="200ms" fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="x" to="-10" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="y" to="14" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="fill" to="#F6F6F6" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <!-- CLOSE -->
+                    <animateTransform class="close" attributeName="transform" attributeType="XML" begin="indefinite"
+                        type="rotate" to="0 0 0" dur="200ms" fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="x" to="0" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="y" to="0" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="fill" to="#464646" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                </rect>
+                <rect y="9" width="20" height="2">
+                    <!-- OPEN -->
+                    <animate class="open" attributeType="XML" attributeName="width" to="0" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="x" to="10" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="fill" to="#F6F6F6" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <!-- CLOSE -->
+                    <animate class="close" attributeType="XML" attributeName="width" to="20" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="x" to="0" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="fill" to="#464646" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                </rect>
+                <rect y="18" width="20" height="2">
+                    <!-- OPEN -->
+                    <animateTransform class="open" attributeName="transform" attributeType="XML" begin="indefinite"
+                        type="rotate" to="45 0 0" dur="200ms" fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="x" to="6" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="y" to="-1" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="fill" to="#F6F6F6" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <!-- CLOSE -->
+                    <animateTransform class="close" attributeName="transform" attributeType="XML" begin="indefinite"
+                        type="rotate" to="0 0 0" dur="200ms" fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="x" to="0" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="y" to="18" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="fill" to="#464646" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                </rect>
+            </svg>
+        </div>
+        <div id="menu">
+            <div id="menu2">
+                <div id="opcoes">
+                    <div class="opcoes_o">
+                        <a href="index.html">
+                            <h2>OSSO</h2>
+                        </a>
+                    </div>
+                    <div class="opcoes_o">
+                        <a href="colofon.html">
+                            <h2>COLOFÓN</h2>
+                        </a>
+                    </div>
+                    <div class="opcoes_o">
+                        <a onclick="openOssario()">
+                            <h2>OSSÁRIO</h2>
+                        </a>
+                    </div>
+                </div>
+                <div id="redes">
+                    <a href="mailto:osso@revistaosso.pt" target="_blank"><img src="icon/mail-line.png"></a>
+                    <a href="https://revistaosso.pt" target="_blank"><img src="icon/global-line.png"></a>
+                    <a href="https://www.facebook.com/revistaosso/" target="_blank"><img src="icon/facebook-fill.png"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <div class="grid-content">
+            <div class="side">
+                <a-scene embedded vr-mode-ui="enabled: false" loading-screen="enabled: false">
+                    <a-assets>
+                        <a-asset-item id="osso" src="osso.glb"></a-asset-item>
+                    </a-assets>
+                    <a-gltf-model id="osso_model" scale="0.2 0.2 0.2" rotation="0 0 0" position="0 0 0" src="#osso"></a-gltf-model>
+                    <a-camera wasd-controls-enabled="false" look-controls-enabled="false" position="0 0 5"></a-camera>
+                </a-scene>
+            </div>
+            <div class="main">
+                <article>
+                    <span class="tag">Casa & Jardim</span>
+                    <h1>Ocupação</h1>
+                    <span class="author">M. Silveira Ferandes</span>
+                    <div class="cover"><img src="img/articles/12/12.1.jpg"></div>
+                    <div class="content">
+                        <p>O universo observável, uma esfera definida pela perceção humana onde se encontra toda a matéria passível de ser observada a partir da Terra, terá um diâmetro de aproximadamente 93 mil milhões de anos-luz, 46,5 em qualquer direção
+                            na qual apontemos os nossos telescópios. E o que mais há nessa vastidão, concebível mas inimaginável pelos nossos cérebros feitos para lidar com arredores, é espaço livre, desgovernado, o meio interestelar com uma densidade
+                            média de um átomo por centímetro cúbico, à mercê da passagem praticamente irrestrita de qualquer objeto. Tanto se pode ver aqui a derrota e o desespero, como encontrar em todos estes centímetros cúbicos a oportunidade de sonhar
+                            mais longe, além das prateleiras e gavetas, das cidades e campos, a possibilidade de transcender a própria vida num processo intergeracional que ligará as origens ao inevitável fim da espécie — um círculo que se fecha, e já
+                            não a busca meã, extinguível, por um instante de absoluto domínio sobre o provável. A imensurabilidade do cosmos oferece um espaço sem fim para a construção da felicidade, não como fugaz instante remetido ao passado, mas enquanto
+                            processo, um presente em construção. A escolha é nossa.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <div class="hover">
+        <div class="noise"></div>
+    </div>
+
+    <script src="javaScript/main.js"></script>
+    <script src="javaScript/menu.js"></script>
+    <script src="javaScript/osso.js"></script>
+    <script src="javaScript/osso_rotation.js"></script>
+
+</body>
+
+</html>

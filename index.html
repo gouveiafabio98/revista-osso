@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Revista Osso</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <!--<script src="javaScript/drag.js"></script>-->
+</head>
+
+<body id="scroll-horizontal">
+
+    <a-scene embedded vr-mode-ui="enabled: false" loading-screen="enabled: false" id="model_bone">
+        <a-assets>
+            <a-asset-item id="osso" src="osso.glb"></a-asset-item>
+        </a-assets>
+        <a-gltf-model id="osso_model" scale="0.2 0.2 0.2" rotation="0 0 0" position="0 0 0" src="#osso"></a-gltf-model>
+        <a-camera wasd-controls-enabled="false" look-controls-enabled="false" position="0 0 5"></a-camera>
+    </a-scene>
+
+    <header id="head">
+        <logo id="logo"><a href="index.html">Revista Osso</a></logo>
+        <div id="hamburguer">
+            <svg width="20" heigth="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#464646">
+                <rect y="0" width="20" height="2">
+                    <!-- OPEN -->
+                    <animateTransform class="open" attributeName="transform" attributeType="XML" begin="indefinite"
+                        type="rotate" to="-45 0 0" dur="200ms" fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="x" to="-10" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="y" to="14" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="fill" to="#F6F6F6" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <!-- CLOSE -->
+                    <animateTransform class="close" attributeName="transform" attributeType="XML" begin="indefinite"
+                        type="rotate" to="0 0 0" dur="200ms" fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="x" to="0" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="y" to="0" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="fill" to="#464646" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                </rect>
+                <rect y="9" width="20" height="2">
+                    <!-- OPEN -->
+                    <animate class="open" attributeType="XML" attributeName="width" to="0" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="x" to="10" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="fill" to="#F6F6F6" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <!-- CLOSE -->
+                    <animate class="close" attributeType="XML" attributeName="width" to="20" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="x" to="0" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="fill" to="#464646" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                </rect>
+                <rect y="18" width="20" height="2">
+                    <!-- OPEN -->
+                    <animateTransform class="open" attributeName="transform" attributeType="XML" begin="indefinite"
+                        type="rotate" to="45 0 0" dur="200ms" fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="x" to="6" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="y" to="-1" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="open" attributeType="XML" attributeName="fill" to="#F6F6F6" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                    <!-- CLOSE -->
+                    <animateTransform class="close" attributeName="transform" attributeType="XML" begin="indefinite"
+                        type="rotate" to="0 0 0" dur="200ms" fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="x" to="0" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="y" to="18" begin="indefinite" dur="200ms"
+                        fill="freeze" />
+                    <animate class="close" attributeType="XML" attributeName="fill" to="#464646" begin="indefinite"
+                        dur="200ms" fill="freeze" />
+                </rect>
+            </svg>
+        </div>
+        <div id="menu">
+            <div id="menu2">
+                <div id="opcoes">
+                    <div class="opcoes_o">
+                        <a href="index.html">
+                            <h2>OSSO</h2>
+                        </a>
+                    </div>
+                    <div class="opcoes_o">
+                        <a href="colofon.html">
+                            <h2>COLOFÓN</h2>
+                        </a>
+                    </div>
+                    <div class="opcoes_o">
+                        <a onclick="openOssario()">
+                            <h2>OSSÁRIO</h2>
+                        </a>
+                    </div>
+                </div>
+                <div id="redes">
+                    <a href="mailto:osso@revistaosso.pt" target="_blank"><img src="icon/mail-line.png"></a>
+                    <a href="https://revistaosso.pt" target="_blank"><img src="icon/global-line.png"></a>
+                    <a href="https://www.facebook.com/revistaosso/" target="_blank"><img src="icon/facebook-fill.png"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="content">
+        <div id="main">
+            <div class="grid-content">
+                <div class="osso">
+                    <h1>Osso</h1>
+                    <h1>Osso</h1>
+                    <h1 class="hidden">Osso</h1>
+                </div>
+
+                <div class="osso">
+                    <h1>Osso</h1>
+                    <h1 class="hidden">Osso</h1>
+                    <h1 class="hidden">Osso</h1>
+                </div>
+
+                <div class="osso">
+                    <h1>Osso</h1>
+                    <h1 class="hidden">Osso</h1>
+                    <h1>Osso</h1>
+                </div>
+
+                <div class="osso">
+                    <h1 class="hidden">Osso</h1>
+                    <h1>Osso</h1>
+                    <h1 class="hidden">Osso</h1>
+                </div>
+
+                <div class="scroll_arrow">
+                    <img src="icon/scroll.svg" alt="Scroll">
+                    <p>Scroll</p>
+                </div>
+            </div>
+        </div>
+        <div id="ossario">
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_12.png">
+                <div class="content">
+                    <h2>DOZE</h2>
+                    <p>16 outubro 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_11.png">
+                <div class="content">
+                    <h2>ONZE</h2>
+                    <p>21 agosto 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_10.png">
+                <div class="content">
+                    <h2>DEZ</h2>
+                    <p>7 agosto 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_9.png">
+                <div class="content">
+                    <h2>NOVE</h2>
+                    <p>24 julho 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_8.png">
+                <div class="content">
+                    <h2>OITO</h2>
+                    <p>10 julho 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_7.png">
+                <div class="content">
+                    <h2>SETE</h2>
+                    <p>27 junho 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_6.png">
+                <div class="content">
+                    <h2>SEIS</h2>
+                    <p>12 junho 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_5.png">
+                <div class="content">
+                    <h2>CINCO</h2>
+                    <p>29 maio 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_4.png">
+                <div class="content">
+                    <h2>QUATRO</h2>
+                    <p>15 maio 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_3.png">
+                <div class="content">
+                    <h2>TRÊS</h2>
+                    <p>1 maio 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_2.png">
+                <div class="content">
+                    <h2>DOIS</h2>
+                    <p>24 abril 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_1.png">
+                <div class="content">
+                    <h2>UM</h2>
+                    <p>17 abril 2021</p>
+                </div>
+            </div>
+            <div class="edition" onclick="location.href='edicao.html'">
+                <img src="img/osso_0.png">
+                <div class="content">
+                    <h2>ZERO</h2>
+                    <p>10 abril 2021</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hover">
+        <div class="noise"></div>
+    </div>
+</body>
+
+<script src="javaScript/main.js"></script>
+<script src="javaScript/menu.js"></script>
+
+<script src="javaScript/index.js"></script>
+<script src="javaScript/ossario.js"></script>
+
+<script src="javaScript/osso.js"></script>
+
+</html>
