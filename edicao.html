@@ -3,22 +3,15 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Revista Osso</title>
+    <title>Revista Osso - Edição</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <!--<script src="javaScript/drag.js"></script>-->
 </head>
 
-<body id="scroll-horizontal">
+<body>
 
-    <a-scene embedded vr-mode-ui="enabled: false" loading-screen="enabled: false" id="model_bone">
-        <a-assets>
-            <a-asset-item id="osso" src="osso.glb"></a-asset-item>
-        </a-assets>
-        <a-gltf-model id="osso_model" scale="0.2 0.2 0.2" rotation="0 0 0" position="0 0 0" src="#osso"></a-gltf-model>
-        <a-camera wasd-controls-enabled="false" look-controls-enabled="false" position="0 0 5"></a-camera>
-    </a-scene>
+
 
     <header id="head">
         <logo id="logo"><a href="index.html">Revista Osso</a></logo>
@@ -109,135 +102,77 @@
             </div>
         </div>
     </header>
-
     <div id="content">
-        <div id="main">
-            <div class="grid-content">
-                <div class="osso">
-                    <h1>Osso</h1>
-                    <h1>Osso</h1>
-                    <h1 class="hidden">Osso</h1>
+        <div class="grid-content">
+            <div class="side">
+                <div id="cover">
+                    <img src="img/osso_11.png">
                 </div>
-
-                <div class="osso">
-                    <h1>Osso</h1>
-                    <h1 class="hidden">Osso</h1>
-                    <h1 class="hidden">Osso</h1>
-                </div>
-
-                <div class="osso">
-                    <h1>Osso</h1>
-                    <h1 class="hidden">Osso</h1>
-                    <h1>Osso</h1>
-                </div>
-
-                <div class="osso">
-                    <h1 class="hidden">Osso</h1>
-                    <h1>Osso</h1>
-                    <h1 class="hidden">Osso</h1>
-                </div>
-
-                <div class="scroll_arrow">
-                    <img src="icon/scroll.svg" alt="Scroll">
-                    <p>Scroll</p>
-                </div>
+                <a-scene embedded vr-mode-ui="enabled: false" loading-screen="enabled: false">
+                    <a-assets>
+                        <a-asset-item id="osso" src="osso.glb"></a-asset-item>
+                    </a-assets>
+                    <a-gltf-model id="osso_model" scale="0.2 0.2 0.2" rotation="0 0 0" position="0 0 0" src="#osso"></a-gltf-model>
+                    <a-camera wasd-controls-enabled="false" look-controls-enabled="false" position="0 0 5"></a-camera>
+                </a-scene>
             </div>
-        </div>
-        <div id="ossario">
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_12.png">
-                <div class="content">
-                    <h2>DOZE</h2>
-                    <p>16 outubro 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_11.png">
-                <div class="content">
-                    <h2>ONZE</h2>
-                    <p>21 agosto 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_10.png">
-                <div class="content">
-                    <h2>DEZ</h2>
-                    <p>7 agosto 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_9.png">
-                <div class="content">
-                    <h2>NOVE</h2>
-                    <p>24 julho 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_8.png">
-                <div class="content">
-                    <h2>OITO</h2>
-                    <p>10 julho 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_7.png">
-                <div class="content">
-                    <h2>SETE</h2>
-                    <p>27 junho 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_6.png">
-                <div class="content">
-                    <h2>SEIS</h2>
-                    <p>12 junho 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_5.png">
-                <div class="content">
-                    <h2>CINCO</h2>
-                    <p>29 maio 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_4.png">
-                <div class="content">
-                    <h2>QUATRO</h2>
-                    <p>15 maio 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_3.png">
-                <div class="content">
-                    <h2>TRÊS</h2>
-                    <p>1 maio 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_2.png">
-                <div class="content">
-                    <h2>DOIS</h2>
-                    <p>24 abril 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_1.png">
-                <div class="content">
-                    <h2>UM</h2>
-                    <p>17 abril 2021</p>
-                </div>
-            </div>
-            <div class="edition" onclick="location.href='edicao.html'">
-                <img src="img/osso_0.png">
-                <div class="content">
-                    <h2>ZERO</h2>
-                    <p>10 abril 2021</p>
+            <div class="main">
+                <div class="list">
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">Casa & Jardim</span>
+                        <div class="cover"><img src="img/articles/12/12.1.jpg"></div>
+                        <span class="title">Ocupação</span>
+                        <span class="author">M. Silveira Fernandes</span>
+                    </div>
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">A canfoneira de Bencanta</span>
+                        <div class="cover"><img src="img/articles/12/12.2.jpg"></div>
+                        <span class="title">A Betoneira</span>
+                        <span class="author">Luís Janueiro</span>
+                    </div>
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">Corpo, beleza e saúde</span>
+                        <span class="title">Ser água</span>
+                        <span class="author">Rita Serra</span>
+                    </div>
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">O Desplante</span>
+                        <div class="cover"><img src="img/articles/12/12.4.jpg"></div>
+                        <span class="title">Hiatos</span>
+                        <span class="author">Frederico Martinho</span>
+                    </div>
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">Teatro</span>
+                        <span class="title">MIM - My Inner Mind</span>
+                        <span class="author">Marionet</span>
+                    </div>
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">Notas do Arquivo</span>
+                        <div class="cover"><img src="img/articles/12/12.5.jpg"></div>
+                        <span class="title">Notas de Arquivo</span>
+                        <span class="author">Francisco Feio</span>
+                    </div>
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">Três Tempos</span>
+                        <div class="cover"><img src="img/articles/12/12.6.png"></div>
+                        <span class="title">Três Tempos</span>
+                        <span class="author">Ostraliana</span>
+                    </div>
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">Poesia</span>
+                        <span class="title">Caminhos de casa</span>
+                        <span class="author">Miguel Serras Pereira</span>
+                    </div>
+                    <div class="article" onclick="location.href='artigo.html'">
+                        <span class="tag">Pais e Mães para Filhas E Filhos</span>
+                        <div class="cover"><img src="img/articles/12/12.8.png"></div>
+                        <span class="title">As unhas dos pés do homúnculo de Penfield</span>
+                        <span class="author">Dr. Pichón R.</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="hover">
         <div class="noise"></div>
     </div>
@@ -245,10 +180,20 @@
 
 <script src="javaScript/main.js"></script>
 <script src="javaScript/menu.js"></script>
-
-<script src="javaScript/index.js"></script>
-<script src="javaScript/ossario.js"></script>
-
 <script src="javaScript/osso.js"></script>
+<script src="javaScript/osso_rotation.js"></script>
+
+<script>
+    /*var cover = document.getElementById("cover");
+
+        coverSize();
+
+        function coverSize() {
+            cover.style.top = -cover.children[0].height / 4 + "px";
+            cover.style.left = -cover.children[0].width / 4 + "px";
+        }
+
+        window.onresize = coverSize;*/
+</script>
 
 </html>
