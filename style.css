@@ -23,6 +23,7 @@ body {
     background-color: #E3E3E3;
     color: #323232;
     transition: all 200ms;
+    hyphens: auto;
 }
 
 p {
@@ -32,7 +33,7 @@ p {
 }
 
 h1 {
-    font-size: 6em;
+    font-size: 5em;
     font-weight: normal;
     margin: 0;
 }
@@ -44,12 +45,19 @@ header {
     align-items: center;
 }
 
+.edicao{
+    position: absolute;
+    left: 3%;
+    cursor: pointer;
+}
+
 header #logo {
     color: #323232;
     text-transform: uppercase;
     font-weight: normal;
     font-size: 1.5em;
     z-index: 4;
+    letter-spacing:0.02em;
 }
 
 header #logo a {
@@ -181,7 +189,7 @@ a-scene {
 }
 
 #ossario .edition {
-    width: 10vw;
+    width: 14vw;
     height: 60%;
     margin-right: 10px;
     text-align: center;
@@ -322,26 +330,36 @@ a-scene {
 
 article .content p {
     font-family: Ebrima;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    /*width: 90%;*/
     line-height: 1.75em;
 }
 
 .content {
-    margin: 3em 0;
+    margin: 3em 0 8em 0;
+}
+
+.edition .content {
+    margin: 0;
 }
 
 article {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    grid-gap: 2%;
+    column-gap: 2%;
     margin: 0 auto;
     border-bottom: 1px solid #323232;
+}
+
+#artigo{
+    overflow: hidden;
+    border: none;
 }
 
 article h1 {
     grid-column-start: 1;
     grid-column-end: 10;
-    margin-bottom: 0.2em;
+    margin: 0.4em 0;
 }
 
 article .tag {
@@ -363,8 +381,8 @@ article .cover {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 40vh;
-    overflow: hidden;
+
+    /*overflow: hidden;*/
 }
 
 article .cover img {
@@ -379,9 +397,8 @@ article .cover img:hover {
 
 article .content {
     grid-column-start: 1;
-    grid-column-end: 10;
+    grid-column-end: 8;
 }
-
 
 /*colofon*/
 
@@ -420,6 +437,7 @@ article .content {
     font-size: 2.5em;
     text-decoration: none;
     text-transform: uppercase;
+    letter-spacing:0.06em;
 }
 
 #menu h2:hover {
@@ -498,7 +516,7 @@ a:-webkit-any-link {
     pointer-events: none;
     will-change: transform;
     animation: noiseAnimation 1s steps(4) infinite;
-    background-image: url("../img/noise.png");
+    background-image: url("img/noise.png");
     width: 200%;
     height: 200%;
     display: block;
@@ -551,6 +569,7 @@ a:-webkit-any-link {
     /* MAIN */
     body {
         overflow-y: auto!important;
+        overflow-x: hidden;
     }
     #content {
         flex-direction: column;
@@ -564,6 +583,12 @@ a:-webkit-any-link {
     .grid-content {
         height: calc(var(--vh, 1vh) * 90);
     }
+    .colofon .grid-content {
+        height: 100%;
+        row-gap: 0;
+        column-gap: 2%;
+        margin-bottom: 8em;
+    }
     #main {
         width: 100%;
         height: calc(var(--vh, 1vh) * 90);
@@ -571,11 +596,12 @@ a:-webkit-any-link {
     #ossario .edition {
         width: 80%;
         height: 15vh !important;
+        min-height: 8em;
         margin-right: 0;
         margin-bottom: 10px;
     }
     a-scene#model_bone {
-        display: none;
+        position: absolute!important;
     }
     #ossario .edition .content h2 {
         font-size: 300%;
@@ -595,6 +621,19 @@ a:-webkit-any-link {
     #main .grid-content .osso h1:first-child {
         display: block;
     }
+    
+    article .content {
+        grid-column-end: 10;
+    }
+    article h1 {
+        margin-bottom: 0.5em;
+    }
+    article .author {
+        margin-bottom: 1em;
+    }
+    article .content p {
+        font-size: 1.3em;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -609,4 +648,35 @@ a:-webkit-any-link {
         grid-column-start: 1;
         grid-column-end: 13;
     }
+    article .content {
+        grid-column-end: 10;
+    }
+    article .content p {
+        font-size: 1.1em;
+    }
+    article .author {
+        margin-bottom: 1em;
+    }
+    .edicao {
+        display: none;
+    }
+    article .cover img {
+        filter: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #b7b6b6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #323232;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0a0a0a;
 }

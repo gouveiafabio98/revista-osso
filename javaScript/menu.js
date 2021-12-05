@@ -30,7 +30,7 @@ function openOssario() {
 
     if(page=="index.html") {
         hamburguerMenu();
-        window.scrollTo(document.getElementById("ossario").offsetLeft, 0);
+        window.scrollTo(document.getElementById("ossario").offsetLeft, document.getElementById("ossario").offsetTop);
         indexNewColor();
     } else {
         window.location.href = "/index.html#ossario";

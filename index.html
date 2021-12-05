@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-    <!--<script src="javaScript/drag.js"></script>-->
+    <script src="javaScript/drag.js"></script>
 </head>
 
 <body id="scroll-horizontal">
@@ -16,12 +16,14 @@
         <a-assets>
             <a-asset-item id="osso" src="osso.glb"></a-asset-item>
         </a-assets>
-        <a-gltf-model id="osso_model" scale="0.2 0.2 0.2" rotation="0 0 0" position="0 0 0" src="#osso"></a-gltf-model>
+        <a-gltf-model id="osso_model" scale="0.2 0.2 0.2" rotation="0 0 0" position="0 0 0" src="#osso" drag-rotate-component></a-gltf-model>
         <a-camera wasd-controls-enabled="false" look-controls-enabled="false" position="0 0 5"></a-camera>
     </a-scene>
 
     <header id="head">
-        <logo id="logo"><a href="index.html">Revista Osso</a></logo>
+        <logo id="logo">
+            <a href="index.html">Revista Osso</a>
+        </logo>
         <div id="hamburguer">
             <svg width="20" heigth="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="#464646">
                 <rect y="0" width="20" height="2">
