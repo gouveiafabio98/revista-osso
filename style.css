@@ -627,6 +627,7 @@ a:-webkit-any-link {
     }
     article h1 {
         margin-bottom: 0.5em;
+        font-size: 4em;
     }
     article .author {
         margin-bottom: 1em;
